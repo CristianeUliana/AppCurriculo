@@ -7,13 +7,32 @@ import {
   View,
   Image,
   ScrollView,
+  Alert,
+  TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather'
 Icon.loadFont()
 import foto from './foto.png';
 
 
+
+
 const App = () => {
+
+function handleRedeSocial(redeSocial) {
+  switch(redeSocial) {
+    case 'linkedin':
+      Alert.alert('Meu Linkedin','https://linkedin.com/in/cristianeuliana')
+    break
+    case 'github':
+      Alert.alert('Meu Github','https://github.com/cristianeuliana')
+    break
+    case 'facebook':
+      Alert.alert('Meu Facebook','https://facebook.com/cristianeuliana')
+    break
+  }
+}
+
   return (
     <SafeAreaView style={styles.page}>
       <ScrollView>
@@ -23,9 +42,15 @@ const App = () => {
           <Text style={styles.nome}>CRISTIANE GONÇALVES ULIANA</Text>
           <Text style={styles.funcao}>Desenvolvedora Mobile</Text>
           <View style={styles.redesSociais}>
-            <Icon name="github" size={25} />
-            <Icon name="linkedin" size={25} />
-            <Icon name="facebook" size={25} />
+            <TouchableOpacity onPress={()=> handleRedeSocial('github')}>
+              <Icon name="github" size={25} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=> handleRedeSocial('linkedin')} >
+              <Icon name="linkedin" size={25} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=> handleRedeSocial('facebook')}>
+              <Icon name="facebook" size={25} />
+            </TouchableOpacity>
           </View>
         </View>
         <View style={styles.card}>
@@ -93,14 +118,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '40%',
-    marginTop: 10
+    marginTop: 10,
+    marginBottom:10
   },
   card: {
     width: '80%',
     borderRadius: 10,
     borderWidth: 2,
     borderColor: '#939393',
-    marginTop: 20,
+    marginTop: 10,
+    marginBottom:10,
     backgroundColor: 'white',
     alignSelf: 'center'
   },
