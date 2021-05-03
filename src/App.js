@@ -56,7 +56,7 @@ function handleRedeSocial(redeSocial) {
         </View>
         <Card empresa="everis" cargo="Desenvolvedora Mobile" periodo="mar de 2021 - o momento"/>
         <Card empresa="Nexxera" cargo="Atendente de Suporte Técnico" periodo="fev de 2019 - mai de 2019"/>
-        <Card empresa="EEB América Dutra Machado" cargo="Professora de Protuguês - ACT" periodo="fev de 2017 - ago de 2017"/>
+        <Card empresa="EEB América Dutra Machado" cargo="Professora de Português - ACT" periodo="fev de 2017 - ago de 2017"/>
       </ScrollView>
     </SafeAreaView>
   );
