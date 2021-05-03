@@ -13,6 +13,7 @@ import {
 import Icon from 'react-native-vector-icons/Feather'
 Icon.loadFont()
 import foto from './foto.png';
+import Card from './components/Card'
 
 
 
@@ -53,36 +54,7 @@ function handleRedeSocial(redeSocial) {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={styles.card}>
-          <View>
-            <Text style={styles.cardHeaderText}>Experiência Profissional</Text>
-          </View>
-          <View>
-            <Text style={styles.cardContentText}>everis</Text>
-            <Text style={styles.cardContentText}>Desenvolvimento Mobile</Text>
-            <Text style={styles.cardContentText}> mar de 2021 - o momento</Text>
-          </View>
-        </View>
-        <View style={styles.card}>
-          <View>
-            <Text style={styles.cardHeaderText}>Experiência Profissional</Text>
-          </View>
-          <View>
-            <Text style={styles.cardContentText}>Nexxera</Text>
-            <Text style={styles.cardContentText}>Atendente de Suporte Técnico</Text>
-            <Text style={styles.cardContentText}>fev de 2019 - mai de 2019</Text>
-          </View>
-        </View>
-        <View style={styles.card}>
-          <View>
-            <Text style={styles.cardHeaderText}>Experiência Profissional</Text>
-          </View>
-          <View>
-            <Text style={styles.cardContentText}>EEB América Dutra Machado</Text>
-            <Text style={styles.cardContentText}>Professora de Protuguês - ACT</Text>
-            <Text style={styles.cardContentText}>fev de 2017 - ago de 2017</Text>
-          </View>
-        </View>
+        <Card />
       </ScrollView>
     </SafeAreaView>
   );
@@ -120,27 +92,6 @@ const styles = StyleSheet.create({
     width: '40%',
     marginTop: 10,
     marginBottom:10
-  },
-  card: {
-    width: '80%',
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: '#939393',
-    marginTop: 10,
-    marginBottom:10,
-    backgroundColor: 'white',
-    alignSelf: 'center'
-  },
-  cardHeaderText: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    margin: 10,
-  },
-  cardContentText: {
-    marginHorizontal: 10,
-    marginBottom: 10,
-    fontSize: 16,
-    color: '#939393'
   },
 });
 
